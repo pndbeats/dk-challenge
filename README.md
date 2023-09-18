@@ -1,73 +1,63 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Pizza / Order API
+### Description
+This is my attempt to write a pizza / ordering API
+A lot of the core features are missing due to familiarizing myself with NestJS
+and overspending time reading it.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+#### What does it cover so far?
+- Crud operations for entities (Orders, Products, Customers)
+- Calculation of Total Cost when Order has been placed
+- In memory storing of data
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+#### What could have been added as potential features
+- Database & ORM module
+- JWT Implementation 
+- Guards restriction
+- Events for handling Order status
+- Further more validation on DTOs and other validation
+- Proper error handling 
+- Logger per severity level
+- Tests for all of the modules
+- Usage of fastify for performance improvement
+- Caching when necessary
+- Swagger 
+- ENV Variables
 
-## Description
+## Available REST Endpoints
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Dillinger is currently extended with the following plugins.
+Instructions on how to use them in your own application are linked below.
 
-## Installation
+| METHOD | URL | RETURN |
+| ------ | ------ | ------ |
+| GET | **products** | Fetch all products
+| GET | **products/id** | Fetch one product
+| POST | **products** | Add new product
+| POST | **products/build** | Add new custom pizza
+| PATCH | **products/:id** | Update a product
+| DELETE | **products/:id** | Delete a product
+|
+| GET | **customers** | Fetch all customers
+| GET | **customers/id** | Fetch one customer
+| PATCH | **customers/:id** | Update a customer
+| DELETE | **customers/:id** | Delete a customer
+||
+| GET | **orders** | Fetch all orders
+| GET | **orders/id** | Fetch one order
+| PATCH | **orders/:id** | Update an order
+| DELETE | **orders/:id** | Delete an order
+#### Resources 
+- NestJS Documentation
+- TypeScript Documentation
 
-```bash
-$ npm install
+ 
+**RUN Commands** 
+npm install
+npm run start:dev
+[**Tests**] => npm run test:watch
+```sh
+Server is running on 127.0.0.1:3000
 ```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
-
-Nest is [MIT licensed](LICENSE).
+MIT
