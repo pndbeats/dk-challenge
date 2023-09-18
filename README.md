@@ -25,8 +25,6 @@ and overspending time reading it.
 
 ## Available REST Endpoints
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
 
 | METHOD | URL | RETURN |
 | ------ | ------ | ------ |
@@ -36,12 +34,10 @@ Instructions on how to use them in your own application are linked below.
 | POST | **products/build** | Add new custom pizza
 | PATCH | **products/:id** | Update a product
 | DELETE | **products/:id** | Delete a product
-|
 | GET | **customers** | Fetch all customers
 | GET | **customers/id** | Fetch one customer
 | PATCH | **customers/:id** | Update a customer
 | DELETE | **customers/:id** | Delete a customer
-||
 | GET | **orders** | Fetch all orders
 | GET | **orders/id** | Fetch one order
 | PATCH | **orders/:id** | Update an order
